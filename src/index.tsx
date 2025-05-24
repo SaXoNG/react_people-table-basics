@@ -10,7 +10,7 @@ import 'bulma/css/bulma.css';
 import '@fortawesome/fontawesome-free/css/all.css';
 
 import { App } from './App';
-import { PeopleTable } from './components/PeopleTable';
+import { PeoplePage } from './components/PeoplePage/PeoplePage';
 
 createRoot(document.getElementById('root') as HTMLDivElement).render(
   <Router>
@@ -21,8 +21,8 @@ createRoot(document.getElementById('root') as HTMLDivElement).render(
         <Route path="home" element={<Navigate to="/" replace />} />
 
         <Route path="people">
-          <Route index element={<PeopleTable />} />
-          <Route path=":slug" element={<PeopleTable />} />
+          <Route index element={<PeoplePage />} />
+          <Route path=":slug" element={<PeoplePage />} />
         </Route>
 
         <Route path="*" element={<h1 className="title">Page not found</h1>} />
